@@ -6,13 +6,10 @@ public class Main {
         cliente.setEdad(51);
         cliente.setNombre("Ernesto");
         cliente.setTelefono("+54 9 3434 123-4567");
-        cliente.setCredito(true);
+        cliente.setCredito(50000.00);
 
-        System.out.println("Cliente:");
-        System.out.println( cliente.getEdad());
-        System.out.println(cliente.getNombre());
-        System.out.println(cliente.getTelefono());
-        System.out.println(cliente.getCredito());
+        System.out.println("Soy " + cliente.nombre + ", tengo " + cliente.edad + " años y mi telefono es " + cliente.telefono
+                + " y mi credito disponible es " + cliente.credito + "pesos argentinos");
 
 
         Trabajador trabajador = new Trabajador();
@@ -22,11 +19,8 @@ public class Main {
         trabajador.setTelefono("+54 9 3435 123-4455");
         trabajador.setSalario(200000.00);
 
-        System.out.println("Trabajador:");
-        System.out.println(trabajador.getEdad());
-        System.out.println(trabajador.getNombre());
-        System.out.println(trabajador.getTelefono());
-        System.out.println(trabajador.getSalario());
+        System.out.println("Soy " + trabajador.nombre + ", tengo " + trabajador.edad + " años y mi telefono es " + trabajador.telefono
+                + " y mi salario es de " + trabajador.salario + "pesos argentinos");
     }
 }
 
@@ -58,12 +52,12 @@ class Persona {
 }
 
 class Cliente extends Persona {
-    boolean credito;
+    double credito;
 
-    public void setCredito(boolean credito) {
+    public void setCredito(double credito) {
         this.credito = credito;
     }
-    public boolean getCredito(){
+    public double getCredito(){
         return this.credito;
     }
 }
